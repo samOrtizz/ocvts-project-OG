@@ -1,116 +1,185 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Carros</title>
+<meta charset="UTF-8">
+<title>Autos Premium</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #111;
-            color: white;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0d0d0d;
+    color: white;
+}
 
-        header {
-            background: black;
-            padding: 20px;
-            text-align: center;
-            font-size: 28px;
-            font-weight: bold;
-        }
+/* NAVBAR */
+header {
+    background: black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav {
-            text-align: center;
-            background: #222;
-            padding: 10px;
-        }
+header h1 {
+    color: red;
+}
 
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
 
-        nav a:hover {
-            color: red;
-        }
+nav a:hover {
+    color: red;
+}
 
-        .container {
-            padding: 20px;
-        }
+/* HERO */
+.hero {
+    background: url('carro1.jpg') center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
 
-        .car-card {
-            background: #1c1c1c;
-            border-radius: 15px;
-            padding: 15px;
-            margin: 20px auto;
-            width: 80%;
-            box-shadow: 0px 0px 15px rgba(255,0,0,0.5);
-            transition: transform 0.3s;
-        }
+.hero h2 {
+    font-size: 50px;
+}
 
-        .car-card:hover {
-            transform: scale(1.05);
-        }
+.hero button {
+    padding: 10px 20px;
+    background: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
 
-        .car-card img {
-            width: 100%;
-            border-radius: 10px;
-        }
+/* SECTION */
+.section {
+    padding: 40px;
+    text-align: center;
+}
 
-        .car-title {
-            font-size: 24px;
-            margin-top: 10px;
-        }
+.cars {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 
-        .price {
-            color: red;
-            font-size: 20px;
-        }
+.card {
+    background: #1c1c1c;
+    width: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: 0.3s;
+}
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: black;
-            margin-top: 30px;
-        }
-    </style>
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+}
+
+.card h3 {
+    margin: 10px;
+}
+
+.price {
+    color: red;
+    font-size: 20px;
+}
+
+/* BUTTON */
+.btn {
+    background: red;
+    padding: 10px;
+    display: inline-block;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+/* FOOTER */
+footer {
+    background: black;
+    text-align: center;
+    padding: 20px;
+}
+</style>
+
 </head>
 
 <body>
 
 <header>
-    🚗 Página de Carros
+    <h1>🚗 AUTOS</h1>
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Modelos</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
 </header>
 
-<nav>
-    <a href="#">Inicio</a>
-    <a href="#">Modelos</a>
-    <a href="#">Contacto</a>
-</nav>
-
-<div class="container">
-
-    <div class="car-card">
-        <img src="carro1.jpg" alt="Carro deportivo">
-        <div class="car-title">Carro Deportivo</div>
-        <p>Velocidad máxima y diseño moderno.</p>
-        <div class="price">$50,000</div>
+<div class="hero">
+    <div>
+        <h2>Encuentra tu carro ideal</h2>
+        <button>Ver catálogo</button>
     </div>
+</div>
 
-    <div class="car-card">
-        <img src="carro2.jpg" alt="Carro clásico">
-        <div class="car-title">Carro Clásico</div>
-        <p>Estilo antiguo con elegancia única.</p>
-        <div class="price">$30,000</div>
+<div class="section">
+    <h2>Nuestros Mejores Carros</h2>
+
+    <div class="cars">
+
+        <div class="card">
+            <img src="carro1.jpg">
+            <h3>Carro Deportivo</h3>
+            <p>Alta velocidad y diseño moderno</p>
+            <p class="price">$50,000</p>
+            <a class="btn" href="#">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="carro2.jpg">
+            <h3>Carro Clásico</h3>
+            <p>Elegancia y estilo antiguo</p>
+            <p class="price">$30,000</p>
+            <a class="btn" href="#">Comprar</a>
+        </div>
+
+        <div class="card">
+            <img src="carro1.jpg">
+            <h3>Carro SUV</h3>
+            <p>Perfecto para familia</p>
+            <p class="price">$40,000</p>
+            <a class="btn" href="#">Comprar</a>
+        </div>
+
     </div>
+</div>
 
+<div class="section" style="background:#111;">
+    <h2>Servicios</h2>
+    <p>✔ Financiamiento</p>
+    <p>✔ Garantía</p>
+    <p>✔ Envío a todo el país</p>
+</div>
+
+<div class="section">
+    <h2>Contacto</h2>
+    <p>Email: autos@email.com</p>
+    <p>Tel: 123-456-7890</p>
 </div>
 
 <footer>
-    © 2026 Página de Carros
+    © 2026 Autos Premium
 </footer>
 
 </body>
